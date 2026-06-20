@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/login_screen.dart';
+import 'package:grocery_app/screens/login/login_screen.dart';
 
 class GroceryApp extends StatelessWidget {
   const GroceryApp({super.key});

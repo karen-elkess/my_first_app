@@ -13,6 +13,7 @@ class ProductDetailsScreen extends StatelessWidget {
      body: Column(
       children: [
         DetailsHeader(),
+        SizedBox(height: 30,),
         ExpandableeText(),
        ],
      ),

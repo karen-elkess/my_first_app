@@ -9,6 +9,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        child:SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
@@ -127,6 +128,7 @@ class LoginScreen extends StatelessWidget {
               ],
             ),
         ),
+      ),
       ),
     );
   }

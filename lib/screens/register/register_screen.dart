@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/home/home_screen.dart';
+import 'package:grocery_app/screens/bottom_navigation_bar/bottom_nav_bar_screen.dart';
+//import 'package:grocery_app/screens/home/home_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -121,7 +122,7 @@ class RegisterScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     Navigator.push(context,
-                     MaterialPageRoute(builder: (context)=> HomeScreen())); 
+                     MaterialPageRoute(builder: (context)=> BottomNavBarScreen())); 
                   },
                   child: Container(
                     width: 370,

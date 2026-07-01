@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:grocery_app/screens/cart/cart_screen.dart';
+import 'package:grocery_app/screens/explore/explore_sreen.dart';
 import 'package:grocery_app/screens/home/home_screen.dart';
 import 'package:grocery_app/screens/login/login_screen.dart';
-import 'package:grocery_app/screens/product_details/product_details_screen.dart';
+//import 'package:grocery_app/screens/product_details/product_details_screen.dart';
 
 
 class BottomNavBarScreen extends StatefulWidget {
@@ -17,9 +19,9 @@ class BottomNavBarScreen extends StatefulWidget {
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   int activeindex = 0;
   List<Widget> screens=[
-  LoginScreen(),
   HomeScreen(),
-  ProductDetailsScreen(),
+  ExploreSreen(),
+  CartScreen(),
   Center( child: Text("Favourites"),),
   Center( child: Text("account"),),
   //نكتب بقى 6 سكرينات عشات يظهروا في ال 5 اماكن بتوع navigationbar
@@ -39,13 +41,13 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
           });
         } ,
         items:[
-          BottomNavigationBarItem(icon: SvgPicture.asset("assets/images/icons/cart_icon.svg",
-           colorFilter:
+
+            BottomNavigationBarItem(icon: SvgPicture.asset("assets/images/icons/shop_icon.svg",
+          colorFilter:
            activeindex==0?ColorFilter.mode(Color(0xff53B175), BlendMode.srcIn): null,
           ),
-          label: "Cart",
+          label: "shop",
            ),
-
            BottomNavigationBarItem(icon: SvgPicture.asset("assets/images/icons/explore_icon.svg",
              colorFilter:
            activeindex==1?ColorFilter.mode(Color(0xff53B175), BlendMode.srcIn): null,
@@ -54,11 +56,11 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
           label: "explorer", 
            ),
 
-           BottomNavigationBarItem(icon: SvgPicture.asset("assets/images/icons/shop_icon.svg",
-          colorFilter:
+           BottomNavigationBarItem(icon: SvgPicture.asset("assets/images/icons/cart_icon.svg",
+           colorFilter:
            activeindex==2?ColorFilter.mode(Color(0xff53B175), BlendMode.srcIn): null,
           ),
-          label: "shop",
+          label: "Cart",
            ),
 
            BottomNavigationBarItem(icon: SvgPicture.asset("assets/images/icons/fav_icon.svg",

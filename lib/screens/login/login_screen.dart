@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_app/screens/home/home_screen.dart';
+import 'package:grocery_app/core/widgets/custom_button.dart';
+//import 'package:grocery_app/screens/home/home_screen.dart';
 import 'package:grocery_app/screens/register/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -81,29 +82,12 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 15,),
                 
-                InkWell(
-                  onTap: () {
-                    Navigator.push(context,
+                CustomButton(
+                  title: "Login",
+                  onTap:(){
+                  Navigator.push(context,
                      MaterialPageRoute(builder: (context)=> RegisterScreen()));
                   },
-                  child: Container(
-                    width: 370,
-                    height: 85,
-                    
-                    decoration: BoxDecoration(
-                     color:  Color(0xff53B175),
-                     borderRadius: BorderRadius.circular(14),
-                     ),
-                    child: Align(
-                      child: Text("Log in" ,
-                                      style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w500 ,
-                      color: Colors.white,
-                                      ),
-                                      ),
-                    ) ,
-                  ),
                 ),
                 
                 SizedBox(height: 22,),

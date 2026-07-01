@@ -1,7 +1,9 @@
+//import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/screens/home/widgets/exclusive_offer_list_view.dart';
 import 'package:grocery_app/screens/home/widgets/groceries_list_view.dart';
 import 'package:grocery_app/screens/home/widgets/home_header.dart';
+import 'package:grocery_app/screens/home/widgets/home_slider.dart';
 //product_item
 import 'package:grocery_app/screens/home/widgets/search_field.dart';
 import 'package:grocery_app/screens/home/widgets/title_see_all.dart';
@@ -20,7 +22,8 @@ class HomeScreen extends StatelessWidget {
              HomeHeader(),
               SizedBox(height: 20,) ,
              SearchField(),
-
+               SizedBox(height: 30,),
+               HomeSlider(),
               SizedBox(height: 30,),
              TitleSeeAll(
               title: "Exclusive Offer",
